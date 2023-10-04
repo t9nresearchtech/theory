@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-green.css"
+    />
+    <style>
+      /* Custom styles can be added here */
+      .header {
+        display: flex;
+        align-items: center;
+      }
+
+      .header .menu-icon {
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+      }
+
+      .header h1 {
+        margin: 0;
+        margin-left: 10px;
+      }
+
+      .menu-icon:hover {
+        background-color: #f5f5f5;
+      }
+
+      .slide-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #f5f5f5;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+        z-index: 1;
+      }
+
+      .slide-menu .close-button {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+
+      .slide-menu a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #000;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .slide-menu a:hover {
+        background-color: #ddd;
+      }
+
+      .slide-menu .menu-header {
+        text-align: center;
+      }
+
+      .slide-menu .menu-header h2 {
+        margin: 0;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .content h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your web app content goes here -->
+    <div class="w3-container w3-theme">
+      <div class="header">
+        <div class="menu-icon" onclick="openSlideMenu()">&#9776;</div>
+        <h1>Welcome to [App Name]</h1>
+      </div>
+    </div>
+    <div id="slide-menu" class="slide-menu">
+      <a href="#" class="close-button" onclick="closeSlideMenu()">&times;</a>
+      <div class="menu-header">
+        <h2>Menu</h2>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="equivalence.html">Equivalence Theory</a>
+      <a href="skopos.html">Skopos Theory</a>
+      <a href="descriptive.html">Descriptive Translation Studies</a>
+    </div>
+
+    <div class="content">
+      <h2>Descriptive Translation Studies</h2>
+      <p>
+        Descriptive Translation Studies
+      </p>
+    </div>
+
+    <!-- Additional scripts can be added here -->
+    <script>
+      // JavaScript code can be added here
+      function openSlideMenu() {
+        document.getElementById("slide-menu").style.width = "250px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("slide-menu").style.width = "0";
+      }
+    </script>
+  </body>
+</html>
